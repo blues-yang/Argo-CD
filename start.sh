@@ -5,8 +5,8 @@ secret=`kubectl get secret argocd-initial-admin-secret -n argocd -o yaml | grep 
 password_base64=${secret#*:}
 password=`echo $password_base64 | base64 --decode`
 
-echo -e "\e[44m Login Argo CD(https://localhost:8080/) with admin/$password\e[49m"
-kubectl port-forward -n argocd svc/argocd-server 8080:443 &
+echo -e "\e[44m Login Argo CD(https://localhost:443/) with admin/$password\e[49m"
+kubectl port-forward -n argocd svc/argocd-server 443:443 &
 
 kubectl apply -f application.yaml
 echo -e "\e[44m Login myapp(http://localhost:3200/)\e[49m"

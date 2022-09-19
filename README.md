@@ -13,3 +13,8 @@ run: `./install.sh`
 2. change & push [deployment.yaml](dev/deployment.yaml) into the repo
 3. login Argo CD website: `https://localhost:8080/`, and review the change
 4. login myApp website: `http://localhost:3200/`, and review the change
+
+## Known issue
+1. Could not find service of myapp
+    1. `kubectl replace -f application.yaml --force`
+    2. `./start.sh`
