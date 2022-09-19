@@ -15,6 +15,5 @@ run: `./install.sh`
 4. login myApp website: `http://localhost:3200/`, and review the change
 
 ## Known issue
-1. Could not find service of myapp
-    1. `kubectl replace -f application.yaml --force`
-    2. `./start.sh`
+1. Could not find service of myapp/argocd
+run `fix.sh`

@@ -11,7 +11,12 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 #install Argo CD
+dockerd &
+minikube start --force --driver=docker
+
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
+minikube stop
+pkill dockerd
 echo Done!
