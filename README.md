@@ -2,10 +2,10 @@
 Quick start Argo CD with local machine
 
 ## Install tool chain
-run: `./install.sh`
+run: `sudo ./install.sh`
 
 ## Start Argo CD
-1. run: `./star-argocd`, and save Argo CD user name/password
+1. run: `sudo ./start.sh`, and save Argo CD user name/password
 2. login Argo CD website: `https://localhost:8080/`, and manage your cluster
 
 ## Testing
@@ -16,5 +16,5 @@ run: `./install.sh`
 
 ## Known issue
 1. Could not find service of myapp/argocd
-run `clear.sh`
-rerun `start.sh`
+run `sudo clear.sh`
+rerun `sudo start.sh`
