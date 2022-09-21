@@ -1,6 +1,7 @@
 dockerd &
 minikube start --force --driver=docker
 
+kubectl replace -f application.yaml --force
 kubectl delete namespace myapp
 kubectl delete namespace argocd
 kubectl create namespace argocd

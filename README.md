@@ -1,4 +1,4 @@
-# Argo CD with MiniKube
+# Argo CD + MiniKube
 Quick start Argo CD with local machine
 
 ## Install tool chain
@@ -16,4 +16,5 @@ run: `./install.sh`
 
 ## Known issue
 1. Could not find service of myapp/argocd
-run `fix.sh`
+run `clear.sh`
+rerun `start.sh`
